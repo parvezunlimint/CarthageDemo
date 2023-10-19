@@ -1,0 +1,19 @@
+{
+  "commitish" : "f32a694b58c1fe39c39bdbf0f077bccb5f1d6e1c",
+  "iOS" : [
+    {
+      "identifier" : "ios-arm64",
+      "swiftToolchainVersion" : "5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)",
+      "name" : "CarthageDemo",
+      "hash" : "a91a6fb923515bc55363c86f09b886a3f7bbe4c158955d24ae73b95fa169ea0a",
+      "container" : "CarthageDemo.xcframework"
+    },
+    {
+      "name" : "CarthageDemo",
+      "identifier" : "ios-arm64_x86_64-simulator",
+      "container" : "CarthageDemo.xcframework",
+      "hash" : "f031a27c5ec04f7c4386c91ba51dd45145b22a3387d855d58a4615525b8400ac",
+      "swiftToolchainVersion" : "5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)"
+    }
+  ]
+}

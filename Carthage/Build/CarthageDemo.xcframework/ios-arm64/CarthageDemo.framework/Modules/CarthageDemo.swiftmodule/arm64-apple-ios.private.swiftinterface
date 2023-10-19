@@ -1,0 +1,427 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios17.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CarthageDemo
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Alamofire
+@_exported import CarthageDemo
+import Foundation
+import Moya
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class PaymentCardRecurringDomain {
+  public typealias PaymentClosure = (Swift.Result<CarthageDemo.PaymentResultModel, CarthageDemo.UnlimintErrors>) -> Swift.Void
+  public enum PayTypes {
+    case recurringToken(requisites: CarthageDemo.TokenPaymentRequisites, data: CarthageDemo.RecurringPaymentTokenMethodData)
+    case recurringCard(requisites: CarthageDemo.CardPaymentRequisites, data: CarthageDemo.RecurringPaymentMethodData)
+  }
+  public init(token: Swift.String)
+  @objc deinit
+}
+extension CarthageDemo.PaymentCardRecurringDomain {
+  public func pay(for type: CarthageDemo.PaymentCardRecurringDomain.PayTypes, completion: @escaping CarthageDemo.PaymentCardRecurringDomain.PaymentClosure)
+  public func onUserNavigateTo(url: Foundation.URL) -> CarthageDemo.WebNavigationResults
+}
+public struct BindingMethodData : Swift.Codable {
+  public struct MerchantOrder : Swift.Codable {
+    public let id: Swift.String
+    public let description: Swift.String
+    public init(description: Swift.String, id: Swift.String)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let currency: CarthageDemo.Currency
+  public let customer: CarthageDemo.BindingCustomer
+  public let merchantOrder: CarthageDemo.BindingMethodData.MerchantOrder?
+  public let cardAccount: CarthageDemo.CheckCardAccount?
+  public init(currency: CarthageDemo.Currency, customer: CarthageDemo.BindingCustomer, merchantOrder: CarthageDemo.BindingMethodData.MerchantOrder? = nil, cardAccount: CarthageDemo.CheckCardAccount? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CardRequisites {
+  public let cardNumber: Swift.String
+  public let expireDate: Foundation.Date
+  public let cvc: Swift.String
+  public init(cardNumber: Swift.String, expireDate: Foundation.Date, cvc: Swift.String)
+}
+public struct PaymentCustomer : Swift.Codable {
+  public let homePhone: Swift.String?
+  public let workPhone: Swift.String?
+  public let email: Swift.String
+  public let locale: Swift.String?
+  public let phone: Swift.String?
+  public let ipAddress: Swift.String?
+  public let customerID: Swift.String?
+  public init(homePhone: Swift.String?, workPhone: Swift.String?, email: Swift.String, locale: Swift.String?, phone: Swift.String?, ipAddress: Swift.String?, customerID: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum CardPaymentSystem : Swift.String {
+  case jcb
+  case mastercard
+  case visa
+  case mir
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct RecurringPaymentMethodData : Swift.Codable {
+  public struct CardAccount : Swift.Codable {
+    public let token: Swift.String
+    public let pan: Swift.String
+    public let billingAddress: CarthageDemo.BillingAddress?
+    public let cardIssuer: Swift.String?
+    public init(token: Swift.String, pan: Swift.String, billingAddress: CarthageDemo.BillingAddress?, cardIssuer: Swift.String?)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let merchantName: Swift.String
+  public let paymentMethod: Swift.String
+  public let customer: CarthageDemo.RecurringCustomer
+  public let merchantOrder: CarthageDemo.PaymentMerchantOrder
+  public let paymentData: CarthageDemo.PaymentData
+  public let cardAccount: CarthageDemo.RecurringPaymentMethodData.CardAccount?
+  public let recurringData: CarthageDemo.RecurringData
+  public init(with merchantName: Swift.String, paymentMethod: Swift.String, customer: CarthageDemo.RecurringCustomer, merchantOrder: CarthageDemo.PaymentMerchantOrder, paymentData: CarthageDemo.PaymentData, cardAccount: CarthageDemo.RecurringPaymentMethodData.CardAccount?, recurringData: CarthageDemo.RecurringData)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BillingAddress : Swift.Codable {
+  public let country: Swift.String
+  public let state: Swift.String?
+  public let zip: Swift.String
+  public let city: Swift.String
+  public let addrLine1: Swift.String
+  public let addrLine2: Swift.String?
+  public init(country: Swift.String, state: Swift.String?, zip: Swift.String, city: Swift.String, addrLine1: Swift.String, addrLine2: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@frozen public enum WebNavigationResults {
+  case success
+  case decline
+  case invalid
+  case skip
+  public static func == (a: CarthageDemo.WebNavigationResults, b: CarthageDemo.WebNavigationResults) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum Environments : Swift.String, Swift.CaseIterable {
+  case sandbox
+  case testCyprus
+  case testCyprusNon3dsBinding
+  case nsk
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CarthageDemo.Environments]
+  public typealias RawValue = Swift.String
+  public static var allCases: [CarthageDemo.Environments] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CarthageDemo.Environments {
+  public static var current: CarthageDemo.Environments
+}
+extension Swift.String {
+  public var json: [Swift.String : Any] {
+    get
+  }
+}
+extension Swift.Encodable {
+  public var json: [Swift.String : Any] {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class UnlimitCore {
+  public static let shared: CarthageDemo.UnlimitCore
+  final public var getCardBindingToken: Swift.Bool
+  final public var recurringScheduledType: Swift.String
+  @objc deinit
+}
+public struct PaymentMethodData : Swift.Codable {
+  public struct CardAccount : Swift.Codable {
+    public let billingAddress: CarthageDemo.BillingAddress?
+    public init(token: Swift.String?, billingAddress: CarthageDemo.BillingAddress?)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let merchantName: Swift.String
+  public let paymentMethod: Swift.String
+  public let customer: CarthageDemo.PaymentCustomer
+  public let merchantOrder: CarthageDemo.PaymentMerchantOrder
+  public let paymentData: CarthageDemo.PaymentData
+  public let cardAccount: CarthageDemo.PaymentMethodData.CardAccount?
+  public init(with merchantName: Swift.String, paymentMethod: Swift.String, customer: CarthageDemo.PaymentCustomer, merchantOrder: CarthageDemo.PaymentMerchantOrder, paymentData: CarthageDemo.PaymentData, cardAccount: CarthageDemo.PaymentMethodData.CardAccount?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RecurringCustomer : Swift.Codable {
+  public let email: Swift.String
+  public let locale: Swift.String?
+  public let customerID: Swift.String?
+  public init(email: Swift.String, locale: Swift.String?, customerID: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol Apply {
+}
+extension CarthageDemo.Apply {
+  @discardableResult
+  public func apply(_ closure: (Self) -> Swift.Void) -> Self
+}
+extension ObjectiveC.NSObject : CarthageDemo.Apply {
+}
+public struct PaymentResultModel {
+  public let paymentId: Swift.String
+  public let redirectUrl: Foundation.URL
+}
+public enum UnlimintErrors : Swift.Error, Swift.CustomDebugStringConvertible {
+  case unauthorized(token: Swift.String)
+  case security([Swift.String : Swift.String])
+  case serviceUnavailable
+  case invalidData(any Swift.Error)
+  case networkConnection(any Swift.Error)
+  case `internal`(any Swift.Error)
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct BindingResultModel {
+  public let recurringId: Swift.String
+  public let redirectUrl: Foundation.URL
+}
+public struct PaypalRequisites {
+  public let email: Swift.String
+  public init(email: Swift.String)
+}
+public struct BindingCustomer : Swift.Codable {
+  public let id: Swift.String
+  public let email: Swift.String
+  public let locale: Swift.String?
+  public let phone: Swift.String?
+  public let homePhone: Swift.String?
+  public let workPhone: Swift.String?
+  public init(id: Swift.String, email: Swift.String, locale: Swift.String? = nil, phone: Swift.String? = nil, homePhone: Swift.String? = nil, workPhone: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RecurringPlan : Swift.Codable {
+  public var id: Swift.String
+  public init(id: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Currency : Swift.Codable {
+  public let value: Swift.String
+  public init(with value: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public class PaymentCardDomain {
+  public typealias PaymentClosure = (Swift.Result<CarthageDemo.PaymentResultModel, CarthageDemo.UnlimintErrors>) -> Swift.Void
+  public enum PayTypes {
+    case token(requisites: CarthageDemo.TokenPaymentRequisites, data: CarthageDemo.PaymentTokenMethodData)
+    case card(requisites: CarthageDemo.CardPaymentRequisites, data: CarthageDemo.PaymentMethodData)
+  }
+  public init(token: Swift.String)
+  @objc deinit
+}
+extension CarthageDemo.PaymentCardDomain {
+  public func pay(for type: CarthageDemo.PaymentCardDomain.PayTypes, completion: @escaping CarthageDemo.PaymentCardDomain.PaymentClosure)
+  public func onUserNavigateTo(url: Foundation.URL) -> CarthageDemo.WebNavigationResults
+}
+public struct AvailablePaymentMethod {
+  public enum MethodName : Swift.String {
+    case bankCard
+    case payPal
+    case unknown
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let name: CarthageDemo.AvailablePaymentMethod.MethodName
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class CheckoutDomain {
+  public typealias CheckoutClosure = (Swift.Result<[CarthageDemo.AvailablePaymentMethod], CarthageDemo.UnlimintErrors>) -> Swift.Void
+  public init(with mobieToken: Swift.String)
+  @objc deinit
+}
+extension CarthageDemo.CheckoutDomain {
+  public func availableMethods(completion: @escaping CarthageDemo.CheckoutDomain.CheckoutClosure)
+}
+public struct CheckCardAccount : Swift.Codable {
+  public let billingAddress: CarthageDemo.BillingAddress?
+  public init(billingAddress: CarthageDemo.BillingAddress?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PaypalPaymentCustomer : Swift.Codable {
+  public var email: Swift.String
+  public init(email: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RecurringPaymentTokenMethodData : Swift.Codable {
+  public struct CardAccount : Swift.Codable {
+    public let token: Swift.String
+    public let pan: Swift.String
+    public let billingAddress: CarthageDemo.BillingAddress?
+    public let cardIssuer: Swift.String?
+    public init(token: Swift.String, pan: Swift.String, billingAddress: CarthageDemo.BillingAddress?, cardIssuer: Swift.String?)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let merchantName: Swift.String
+  public let paymentMethod: Swift.String
+  public let customer: CarthageDemo.RecurringCustomer
+  public let merchantOrder: CarthageDemo.PaymentMerchantOrder
+  public let paymentData: CarthageDemo.PaymentData
+  public let cardAccount: CarthageDemo.RecurringPaymentTokenMethodData.CardAccount
+  public let recurringData: CarthageDemo.RecurringData
+  public init(with merchantName: Swift.String, paymentMethod: Swift.String, customer: CarthageDemo.RecurringCustomer, merchantOrder: CarthageDemo.PaymentMerchantOrder, paymentData: CarthageDemo.PaymentData, cardAccount: CarthageDemo.RecurringPaymentTokenMethodData.CardAccount, recurringData: CarthageDemo.RecurringData)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public class PayPalDomain {
+  public typealias PayPalClosure = (Swift.Result<CarthageDemo.PaypalResultModel, CarthageDemo.UnlimintErrors>) -> Swift.Void
+  public init(token: Swift.String)
+  @objc deinit
+}
+extension CarthageDemo.PayPalDomain {
+  public func pay(data: CarthageDemo.PaypalPaymentMethodData, completion: @escaping CarthageDemo.PayPalDomain.PayPalClosure)
+  public func onUserNavigateTo(url: Foundation.URL) -> CarthageDemo.WebNavigationResults
+}
+public struct CardPaymentRequisites {
+  public let cardNumber: Swift.String
+  public let expireDate: Foundation.Date
+  public let cvc: Swift.String
+  public let isGenerateToken: Swift.Bool
+  public init(cardNumber: Swift.String, expireDate: Foundation.Date, cvc: Swift.String, isGenerateToken: Swift.Bool)
+}
+public class BindingCardDomain {
+  public typealias BindingClosure = (Swift.Result<CarthageDemo.BindingResultModel, CarthageDemo.UnlimintErrors>) -> Swift.Void
+  public init(token: Swift.String)
+  @objc deinit
+}
+extension CarthageDemo.BindingCardDomain {
+  public func bindCard(for requisites: CarthageDemo.CardRequisites, data: CarthageDemo.BindingMethodData, completion: @escaping CarthageDemo.BindingCardDomain.BindingClosure)
+  public func onUserNavigateTo(url: Foundation.URL) -> CarthageDemo.WebNavigationResults
+}
+public struct PaypalPaymentMethodData : Swift.Codable {
+  public let merchantName: Swift.String
+  public let merchantOrder: CarthageDemo.PaymentMerchantOrder
+  public let paymentMethod: Swift.String
+  public let paymentData: CarthageDemo.PaymentData
+  public var customer: CarthageDemo.PaypalPaymentCustomer
+  public init(merchantName: Swift.String, merchantOrder: CarthageDemo.PaymentMerchantOrder, paymentMethod: Swift.String, paymentData: CarthageDemo.PaymentData, customer: CarthageDemo.PaypalPaymentCustomer)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ShippingAddress : Swift.Codable {
+  public let country: Swift.String?
+  public let state: Swift.String?
+  public let zip: Swift.String?
+  public let city: Swift.String?
+  public let phone: Swift.String?
+  public let addrLine1: Swift.String?
+  public let addrLine2: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Item : Swift.Codable {
+  public let name: Swift.String
+  public let description: Swift.String?
+  public let count: Swift.Int?
+  public let price: Swift.Float?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PaymentMerchantOrder : Swift.Codable {
+  public let id: Swift.String
+  public let description: Swift.String
+  public let shippingAddress: CarthageDemo.ShippingAddress?
+  public let items: [CarthageDemo.Item]?
+  public init(description: Swift.String, id: Swift.String, shippingAddress: CarthageDemo.ShippingAddress? = nil, items: [CarthageDemo.Item]? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PaymentData : Swift.Codable {
+  public let amount: Foundation.Decimal
+  public let currency: Swift.String
+  public let note: Swift.String?
+  public let dynamicDescriptor: Swift.String?
+  public let transType: Swift.String?
+  public let isEditable: Swift.Bool
+  public let preauth: Swift.Bool?
+  public init(amount: Foundation.Decimal, currency: Swift.String, note: Swift.String?, dynamicDescriptor: Swift.String?, transType: Swift.String?, isEditable: Swift.Bool = false, preauth: Swift.Bool = false)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PaypalResultModel {
+  public let paymentId: Swift.String
+  public let redirectUrl: Foundation.URL
+}
+public struct RecurringData : Swift.Codable {
+  public let amount: Foundation.Decimal?
+  public let currency: Swift.String?
+  public let contractNumber: Swift.String
+  public let initiator: Swift.String
+  public var scheduledType: Swift.String
+  public let transType: Swift.String
+  public let initialAmount: Foundation.Decimal?
+  public let subscriptionStart: Swift.String?
+  public let plan: CarthageDemo.RecurringPlan?
+  public init(amount: Foundation.Decimal?, currency: Swift.String?, contractNumber: Swift.String, transType: Swift.String, initialAmount: Foundation.Decimal?, subscriptionStart: Swift.String?, plan: CarthageDemo.RecurringPlan?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TokenPaymentRequisites {
+  public let cvc: Swift.String
+  public init(cvc: Swift.String)
+}
+public struct PaymentTokenMethodData : Swift.Codable {
+  public struct CardAccount : Swift.Codable {
+    public let token: Swift.String
+    public let pan: Swift.String
+    public let billingAddress: CarthageDemo.BillingAddress?
+    public let cardIssuer: Swift.String?
+    public init(token: Swift.String, pan: Swift.String, billingAddress: CarthageDemo.BillingAddress?, cardIssuer: Swift.String?)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let merchantName: Swift.String
+  public let paymentMethod: Swift.String
+  public let customer: CarthageDemo.PaymentCustomer
+  public let merchantOrder: CarthageDemo.PaymentMerchantOrder
+  public let paymentData: CarthageDemo.PaymentData
+  public let cardAccount: CarthageDemo.PaymentTokenMethodData.CardAccount
+  public init(with merchantName: Swift.String, paymentMethod: Swift.String, customer: CarthageDemo.PaymentCustomer, merchantOrder: CarthageDemo.PaymentMerchantOrder, paymentData: CarthageDemo.PaymentData, cardAccount: CarthageDemo.PaymentTokenMethodData.CardAccount)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension CarthageDemo.CardPaymentSystem : Swift.Equatable {}
+extension CarthageDemo.CardPaymentSystem : Swift.Hashable {}
+extension CarthageDemo.CardPaymentSystem : Swift.RawRepresentable {}
+extension CarthageDemo.WebNavigationResults : Swift.Equatable {}
+extension CarthageDemo.WebNavigationResults : Swift.Hashable {}
+extension CarthageDemo.WebNavigationResults : Swift.Sendable {}
+extension CarthageDemo.Environments : Swift.Equatable {}
+extension CarthageDemo.Environments : Swift.Hashable {}
+extension CarthageDemo.Environments : Swift.RawRepresentable {}
+extension CarthageDemo.AvailablePaymentMethod : Swift.Encodable {}
+extension CarthageDemo.AvailablePaymentMethod : Swift.Decodable {}
+extension CarthageDemo.AvailablePaymentMethod.MethodName : Swift.Equatable {}
+extension CarthageDemo.AvailablePaymentMethod.MethodName : Swift.Hashable {}
+extension CarthageDemo.AvailablePaymentMethod.MethodName : Swift.RawRepresentable {}

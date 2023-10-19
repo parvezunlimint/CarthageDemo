@@ -8,11 +8,147 @@
 
 /* Begin PBXBuildFile section */
 		B3CD74B32AE0F6730067044B /* CarthageDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = B3CD74B22AE0F6730067044B /* CarthageDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3CD75B82AE0FC1F0067044B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75622AE0FC1F0067044B /* NetworkService.swift */; };
+		B3CD75B92AE0FC1F0067044B /* PaymentCardRecurringDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75642AE0FC1F0067044B /* PaymentCardRecurringDomain.swift */; };
+		B3CD75BA2AE0FC1F0067044B /* PaymentCardDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75652AE0FC1F0067044B /* PaymentCardDomain.swift */; };
+		B3CD75BB2AE0FC1F0067044B /* BindingCardDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75662AE0FC1F0067044B /* BindingCardDomain.swift */; };
+		B3CD75BC2AE0FC1F0067044B /* CheckoutDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75672AE0FC1F0067044B /* CheckoutDomain.swift */; };
+		B3CD75BD2AE0FC1F0067044B /* PayPalDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75682AE0FC1F0067044B /* PayPalDomain.swift */; };
+		B3CD75BE2AE0FC1F0067044B /* PaymentRequestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD756B2AE0FC1F0067044B /* PaymentRequestUseCase.swift */; };
+		B3CD75BF2AE0FC1F0067044B /* PaypalRequestUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD756C2AE0FC1F0067044B /* PaypalRequestUsecase.swift */; };
+		B3CD75C02AE0FC1F0067044B /* BindingRequestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD756D2AE0FC1F0067044B /* BindingRequestUseCase.swift */; };
+		B3CD75C12AE0FC1F0067044B /* CheckoutRequestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD756E2AE0FC1F0067044B /* CheckoutRequestUseCase.swift */; };
+		B3CD75C22AE0FC1F0067044B /* RecurringPaymentRequestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD756F2AE0FC1F0067044B /* RecurringPaymentRequestUseCase.swift */; };
+		B3CD75C32AE0FC1F0067044B /* WebValidationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75702AE0FC1F0067044B /* WebValidationUseCase.swift */; };
+		B3CD75C42AE0FC1F0067044B /* UrlValidationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75712AE0FC1F0067044B /* UrlValidationUseCase.swift */; };
+		B3CD75C52AE0FC1F0067044B /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75732AE0FC1F0067044B /* Global.swift */; };
+		B3CD75C62AE0FC1F0067044B /* Unlimit_Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75742AE0FC1F0067044B /* Unlimit_Core.swift */; };
+		B3CD75C72AE0FC1F0067044B /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75762AE0FC1F0067044B /* Environments.swift */; };
+		B3CD75C82AE0FC1F0067044B /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75772AE0FC1F0067044B /* ApiEndpoints.swift */; };
+		B3CD75C92AE0FC1F0067044B /* Throwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75782AE0FC1F0067044B /* Throwable.swift */; };
+		B3CD75CA2AE0FC1F0067044B /* PaymentTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD757A2AE0FC1F0067044B /* PaymentTokenRequest.swift */; };
+		B3CD75CB2AE0FC1F0067044B /* BindingRequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD757B2AE0FC1F0067044B /* BindingRequestToken.swift */; };
+		B3CD75CC2AE0FC1F0067044B /* RecurringPaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD757C2AE0FC1F0067044B /* RecurringPaymentRequest.swift */; };
+		B3CD75CD2AE0FC1F0067044B /* PaypalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD757D2AE0FC1F0067044B /* PaypalRequest.swift */; };
+		B3CD75CE2AE0FC1F0067044B /* RecurringTokenPaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD757E2AE0FC1F0067044B /* RecurringTokenPaymentRequest.swift */; };
+		B3CD75CF2AE0FC1F0067044B /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD757F2AE0FC1F0067044B /* PaymentRequest.swift */; };
+		B3CD75D02AE0FC1F0067044B /* BindingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75802AE0FC1F0067044B /* BindingRequest.swift */; };
+		B3CD75D12AE0FC1F0067044B /* MappingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75812AE0FC1F0067044B /* MappingProtocol.swift */; };
+		B3CD75D22AE0FC1F0067044B /* ReturnUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75832AE0FC1F0067044B /* ReturnUrls.swift */; };
+		B3CD75D32AE0FC1F0067044B /* PaymentResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75852AE0FC1F0067044B /* PaymentResultModel.swift */; };
+		B3CD75D42AE0FC1F0067044B /* TokenizedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75872AE0FC1F0067044B /* TokenizedCard.swift */; };
+		B3CD75D52AE0FC1F0067044B /* PaymentTokenMethodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75882AE0FC1F0067044B /* PaymentTokenMethodData.swift */; };
+		B3CD75D62AE0FC1F0067044B /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75892AE0FC1F0067044B /* PaymentResponse.swift */; };
+		B3CD75D72AE0FC1F0067044B /* PaymentMethodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD758B2AE0FC1F0067044B /* PaymentMethodData.swift */; };
+		B3CD75D82AE0FC1F0067044B /* PaymentCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD758C2AE0FC1F0067044B /* PaymentCustomer.swift */; };
+		B3CD75D92AE0FC1F0067044B /* PaypalResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD758E2AE0FC1F0067044B /* PaypalResultModel.swift */; };
+		B3CD75DA2AE0FC1F0067044B /* PaypalPaymentCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD758F2AE0FC1F0067044B /* PaypalPaymentCustomer.swift */; };
+		B3CD75DB2AE0FC1F0067044B /* PaypalPaymentMethodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75902AE0FC1F0067044B /* PaypalPaymentMethodData.swift */; };
+		B3CD75DC2AE0FC1F0067044B /* PaymentMerchantOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75912AE0FC1F0067044B /* PaymentMerchantOrder.swift */; };
+		B3CD75DD2AE0FC1F0067044B /* RecurringPaymentMethodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75932AE0FC1F0067044B /* RecurringPaymentMethodData.swift */; };
+		B3CD75DE2AE0FC1F0067044B /* RecurringPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75942AE0FC1F0067044B /* RecurringPlan.swift */; };
+		B3CD75DF2AE0FC1F0067044B /* RecurringResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75952AE0FC1F0067044B /* RecurringResponse.swift */; };
+		B3CD75E02AE0FC1F0067044B /* RecurringPaymentTokenMethodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75962AE0FC1F0067044B /* RecurringPaymentTokenMethodData.swift */; };
+		B3CD75E12AE0FC1F0067044B /* RecurringData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75972AE0FC1F0067044B /* RecurringData.swift */; };
+		B3CD75E22AE0FC1F0067044B /* RecurringCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75982AE0FC1F0067044B /* RecurringCustomer.swift */; };
+		B3CD75E32AE0FC1F0067044B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75992AE0FC1F0067044B /* Currency.swift */; };
+		B3CD75E42AE0FC1F0067044B /* CheckCardAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD759A2AE0FC1F0067044B /* CheckCardAccount.swift */; };
+		B3CD75E52AE0FC1F0067044B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD759B2AE0FC1F0067044B /* Card.swift */; };
+		B3CD75E62AE0FC1F0067044B /* UnlimintErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD759C2AE0FC1F0067044B /* UnlimintErrors.swift */; };
+		B3CD75E72AE0FC1F0067044B /* CardBindingResponseToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD759E2AE0FC1F0067044B /* CardBindingResponseToken.swift */; };
+		B3CD75E82AE0FC1F0067044B /* BindingResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD759F2AE0FC1F0067044B /* BindingResultModel.swift */; };
+		B3CD75E92AE0FC200067044B /* BindingMethodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75A02AE0FC1F0067044B /* BindingMethodData.swift */; };
+		B3CD75EA2AE0FC200067044B /* CardBindingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75A12AE0FC1F0067044B /* CardBindingResponse.swift */; };
+		B3CD75EB2AE0FC200067044B /* BindingCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75A22AE0FC1F0067044B /* BindingCustomer.swift */; };
+		B3CD75EC2AE0FC200067044B /* CheckoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75A42AE0FC1F0067044B /* CheckoutResponse.swift */; };
+		B3CD75ED2AE0FC200067044B /* AvailablePaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75A52AE0FC1F0067044B /* AvailablePaymentMethod.swift */; };
+		B3CD75EE2AE0FC200067044B /* CardPaymentSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75A62AE0FC1F0067044B /* CardPaymentSystem.swift */; };
+		B3CD75EF2AE0FC200067044B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75A72AE0FC1F0067044B /* Request.swift */; };
+		B3CD75F02AE0FC200067044B /* CardRequisites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75A92AE0FC1F0067044B /* CardRequisites.swift */; };
+		B3CD75F12AE0FC200067044B /* TokenPaymentRequisites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75AA2AE0FC1F0067044B /* TokenPaymentRequisites.swift */; };
+		B3CD75F22AE0FC200067044B /* CardPaymentRequisites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75AB2AE0FC1F0067044B /* CardPaymentRequisites.swift */; };
+		B3CD75F32AE0FC200067044B /* PaypalRequisites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75AC2AE0FC1F0067044B /* PaypalRequisites.swift */; };
+		B3CD75F42AE0FC200067044B /* WebNavigationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75AD2AE0FC1F0067044B /* WebNavigationResults.swift */; };
+		B3CD75F52AE0FC200067044B /* BillingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75AE2AE0FC1F0067044B /* BillingAddress.swift */; };
+		B3CD75F62AE0FC200067044B /* Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75B12AE0FC1F0067044B /* Apply.swift */; };
+		B3CD75F72AE0FC200067044B /* Encodable+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75B32AE0FC1F0067044B /* Encodable+json.swift */; };
+		B3CD75F82AE0FC200067044B /* String+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75B52AE0FC1F0067044B /* String+Json.swift */; };
+		B3CD75F92AE0FC200067044B /* NSError+Unlimint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD75B72AE0FC1F0067044B /* NSError+Unlimint.swift */; };
+		B3CD75FD2AE0FDA30067044B /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CD75FB2AE0FDA30067044B /* Alamofire.xcframework */; };
+		B3CD75FF2AE0FDA30067044B /* Moya.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CD75FC2AE0FDA30067044B /* Moya.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3CD74AF2AE0F6730067044B /* CarthageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CarthageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CD74B22AE0F6730067044B /* CarthageDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarthageDemo.h; sourceTree = "<group>"; };
+		B3CD75622AE0FC1F0067044B /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B3CD75642AE0FC1F0067044B /* PaymentCardRecurringDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardRecurringDomain.swift; sourceTree = "<group>"; };
+		B3CD75652AE0FC1F0067044B /* PaymentCardDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardDomain.swift; sourceTree = "<group>"; };
+		B3CD75662AE0FC1F0067044B /* BindingCardDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingCardDomain.swift; sourceTree = "<group>"; };
+		B3CD75672AE0FC1F0067044B /* CheckoutDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutDomain.swift; sourceTree = "<group>"; };
+		B3CD75682AE0FC1F0067044B /* PayPalDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPalDomain.swift; sourceTree = "<group>"; };
+		B3CD756B2AE0FC1F0067044B /* PaymentRequestUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequestUseCase.swift; sourceTree = "<group>"; };
+		B3CD756C2AE0FC1F0067044B /* PaypalRequestUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaypalRequestUsecase.swift; sourceTree = "<group>"; };
+		B3CD756D2AE0FC1F0067044B /* BindingRequestUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingRequestUseCase.swift; sourceTree = "<group>"; };
+		B3CD756E2AE0FC1F0067044B /* CheckoutRequestUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRequestUseCase.swift; sourceTree = "<group>"; };
+		B3CD756F2AE0FC1F0067044B /* RecurringPaymentRequestUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringPaymentRequestUseCase.swift; sourceTree = "<group>"; };
+		B3CD75702AE0FC1F0067044B /* WebValidationUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebValidationUseCase.swift; sourceTree = "<group>"; };
+		B3CD75712AE0FC1F0067044B /* UrlValidationUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlValidationUseCase.swift; sourceTree = "<group>"; };
+		B3CD75732AE0FC1F0067044B /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		B3CD75742AE0FC1F0067044B /* Unlimit_Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unlimit_Core.swift; sourceTree = "<group>"; };
+		B3CD75762AE0FC1F0067044B /* Environments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
+		B3CD75772AE0FC1F0067044B /* ApiEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		B3CD75782AE0FC1F0067044B /* Throwable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throwable.swift; sourceTree = "<group>"; };
+		B3CD757A2AE0FC1F0067044B /* PaymentTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenRequest.swift; sourceTree = "<group>"; };
+		B3CD757B2AE0FC1F0067044B /* BindingRequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingRequestToken.swift; sourceTree = "<group>"; };
+		B3CD757C2AE0FC1F0067044B /* RecurringPaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringPaymentRequest.swift; sourceTree = "<group>"; };
+		B3CD757D2AE0FC1F0067044B /* PaypalRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaypalRequest.swift; sourceTree = "<group>"; };
+		B3CD757E2AE0FC1F0067044B /* RecurringTokenPaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringTokenPaymentRequest.swift; sourceTree = "<group>"; };
+		B3CD757F2AE0FC1F0067044B /* PaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
+		B3CD75802AE0FC1F0067044B /* BindingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingRequest.swift; sourceTree = "<group>"; };
+		B3CD75812AE0FC1F0067044B /* MappingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingProtocol.swift; sourceTree = "<group>"; };
+		B3CD75832AE0FC1F0067044B /* ReturnUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnUrls.swift; sourceTree = "<group>"; };
+		B3CD75852AE0FC1F0067044B /* PaymentResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResultModel.swift; sourceTree = "<group>"; };
+		B3CD75872AE0FC1F0067044B /* TokenizedCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizedCard.swift; sourceTree = "<group>"; };
+		B3CD75882AE0FC1F0067044B /* PaymentTokenMethodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTokenMethodData.swift; sourceTree = "<group>"; };
+		B3CD75892AE0FC1F0067044B /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		B3CD758B2AE0FC1F0067044B /* PaymentMethodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodData.swift; sourceTree = "<group>"; };
+		B3CD758C2AE0FC1F0067044B /* PaymentCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCustomer.swift; sourceTree = "<group>"; };
+		B3CD758E2AE0FC1F0067044B /* PaypalResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaypalResultModel.swift; sourceTree = "<group>"; };
+		B3CD758F2AE0FC1F0067044B /* PaypalPaymentCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaypalPaymentCustomer.swift; sourceTree = "<group>"; };
+		B3CD75902AE0FC1F0067044B /* PaypalPaymentMethodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaypalPaymentMethodData.swift; sourceTree = "<group>"; };
+		B3CD75912AE0FC1F0067044B /* PaymentMerchantOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMerchantOrder.swift; sourceTree = "<group>"; };
+		B3CD75932AE0FC1F0067044B /* RecurringPaymentMethodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringPaymentMethodData.swift; sourceTree = "<group>"; };
+		B3CD75942AE0FC1F0067044B /* RecurringPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringPlan.swift; sourceTree = "<group>"; };
+		B3CD75952AE0FC1F0067044B /* RecurringResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringResponse.swift; sourceTree = "<group>"; };
+		B3CD75962AE0FC1F0067044B /* RecurringPaymentTokenMethodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringPaymentTokenMethodData.swift; sourceTree = "<group>"; };
+		B3CD75972AE0FC1F0067044B /* RecurringData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringData.swift; sourceTree = "<group>"; };
+		B3CD75982AE0FC1F0067044B /* RecurringCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringCustomer.swift; sourceTree = "<group>"; };
+		B3CD75992AE0FC1F0067044B /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		B3CD759A2AE0FC1F0067044B /* CheckCardAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCardAccount.swift; sourceTree = "<group>"; };
+		B3CD759B2AE0FC1F0067044B /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B3CD759C2AE0FC1F0067044B /* UnlimintErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnlimintErrors.swift; sourceTree = "<group>"; };
+		B3CD759E2AE0FC1F0067044B /* CardBindingResponseToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBindingResponseToken.swift; sourceTree = "<group>"; };
+		B3CD759F2AE0FC1F0067044B /* BindingResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingResultModel.swift; sourceTree = "<group>"; };
+		B3CD75A02AE0FC1F0067044B /* BindingMethodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingMethodData.swift; sourceTree = "<group>"; };
+		B3CD75A12AE0FC1F0067044B /* CardBindingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBindingResponse.swift; sourceTree = "<group>"; };
+		B3CD75A22AE0FC1F0067044B /* BindingCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingCustomer.swift; sourceTree = "<group>"; };
+		B3CD75A42AE0FC1F0067044B /* CheckoutResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutResponse.swift; sourceTree = "<group>"; };
+		B3CD75A52AE0FC1F0067044B /* AvailablePaymentMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailablePaymentMethod.swift; sourceTree = "<group>"; };
+		B3CD75A62AE0FC1F0067044B /* CardPaymentSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPaymentSystem.swift; sourceTree = "<group>"; };
+		B3CD75A72AE0FC1F0067044B /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B3CD75A92AE0FC1F0067044B /* CardRequisites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRequisites.swift; sourceTree = "<group>"; };
+		B3CD75AA2AE0FC1F0067044B /* TokenPaymentRequisites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenPaymentRequisites.swift; sourceTree = "<group>"; };
+		B3CD75AB2AE0FC1F0067044B /* CardPaymentRequisites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPaymentRequisites.swift; sourceTree = "<group>"; };
+		B3CD75AC2AE0FC1F0067044B /* PaypalRequisites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaypalRequisites.swift; sourceTree = "<group>"; };
+		B3CD75AD2AE0FC1F0067044B /* WebNavigationResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebNavigationResults.swift; sourceTree = "<group>"; };
+		B3CD75AE2AE0FC1F0067044B /* BillingAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingAddress.swift; sourceTree = "<group>"; };
+		B3CD75B12AE0FC1F0067044B /* Apply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apply.swift; sourceTree = "<group>"; };
+		B3CD75B32AE0FC1F0067044B /* Encodable+json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+json.swift"; sourceTree = "<group>"; };
+		B3CD75B52AE0FC1F0067044B /* String+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Json.swift"; sourceTree = "<group>"; };
+		B3CD75B72AE0FC1F0067044B /* NSError+Unlimint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+Unlimint.swift"; sourceTree = "<group>"; };
+		B3CD75FB2AE0FDA30067044B /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
+		B3CD75FC2AE0FDA30067044B /* Moya.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Moya.xcframework; path = Carthage/Build/Moya.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +156,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CD75FD2AE0FDA30067044B /* Alamofire.xcframework in Frameworks */,
+				B3CD75FF2AE0FDA30067044B /* Moya.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +169,7 @@
 			children = (
 				B3CD74B12AE0F6730067044B /* CarthageDemo */,
 				B3CD74B02AE0F6730067044B /* Products */,
+				B3CD75FA2AE0FDA30067044B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +184,252 @@
 		B3CD74B12AE0F6730067044B /* CarthageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B3CD75722AE0FC1F0067044B /* Common */,
+				B3CD75632AE0FC1F0067044B /* Domains */,
+				B3CD75AF2AE0FC1F0067044B /* Extensions */,
+				B3CD75612AE0FC1F0067044B /* Services */,
+				B3CD75692AE0FC1F0067044B /* UseCases */,
 				B3CD74B22AE0F6730067044B /* CarthageDemo.h */,
 			);
 			path = CarthageDemo;
+			sourceTree = "<group>";
+		};
+		B3CD75612AE0FC1F0067044B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75622AE0FC1F0067044B /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B3CD75632AE0FC1F0067044B /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75642AE0FC1F0067044B /* PaymentCardRecurringDomain.swift */,
+				B3CD75652AE0FC1F0067044B /* PaymentCardDomain.swift */,
+				B3CD75662AE0FC1F0067044B /* BindingCardDomain.swift */,
+				B3CD75672AE0FC1F0067044B /* CheckoutDomain.swift */,
+				B3CD75682AE0FC1F0067044B /* PayPalDomain.swift */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		B3CD75692AE0FC1F0067044B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD756A2AE0FC1F0067044B /* RequestUsecases */,
+				B3CD75702AE0FC1F0067044B /* WebValidationUseCase.swift */,
+				B3CD75712AE0FC1F0067044B /* UrlValidationUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B3CD756A2AE0FC1F0067044B /* RequestUsecases */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD756B2AE0FC1F0067044B /* PaymentRequestUseCase.swift */,
+				B3CD756C2AE0FC1F0067044B /* PaypalRequestUsecase.swift */,
+				B3CD756D2AE0FC1F0067044B /* BindingRequestUseCase.swift */,
+				B3CD756E2AE0FC1F0067044B /* CheckoutRequestUseCase.swift */,
+				B3CD756F2AE0FC1F0067044B /* RecurringPaymentRequestUseCase.swift */,
+			);
+			path = RequestUsecases;
+			sourceTree = "<group>";
+		};
+		B3CD75722AE0FC1F0067044B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75732AE0FC1F0067044B /* Global.swift */,
+				B3CD75742AE0FC1F0067044B /* Unlimit_Core.swift */,
+				B3CD75752AE0FC1F0067044B /* Networking */,
+				B3CD75822AE0FC1F0067044B /* Entities */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B3CD75752AE0FC1F0067044B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75762AE0FC1F0067044B /* Environments.swift */,
+				B3CD75772AE0FC1F0067044B /* ApiEndpoints.swift */,
+				B3CD75782AE0FC1F0067044B /* Throwable.swift */,
+				B3CD75792AE0FC1F0067044B /* Requests */,
+				B3CD75812AE0FC1F0067044B /* MappingProtocol.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B3CD75792AE0FC1F0067044B /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD757A2AE0FC1F0067044B /* PaymentTokenRequest.swift */,
+				B3CD757B2AE0FC1F0067044B /* BindingRequestToken.swift */,
+				B3CD757C2AE0FC1F0067044B /* RecurringPaymentRequest.swift */,
+				B3CD757D2AE0FC1F0067044B /* PaypalRequest.swift */,
+				B3CD757E2AE0FC1F0067044B /* RecurringTokenPaymentRequest.swift */,
+				B3CD757F2AE0FC1F0067044B /* PaymentRequest.swift */,
+				B3CD75802AE0FC1F0067044B /* BindingRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		B3CD75822AE0FC1F0067044B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75832AE0FC1F0067044B /* ReturnUrls.swift */,
+				B3CD75842AE0FC1F0067044B /* Payment */,
+				B3CD75992AE0FC1F0067044B /* Currency.swift */,
+				B3CD759A2AE0FC1F0067044B /* CheckCardAccount.swift */,
+				B3CD759B2AE0FC1F0067044B /* Card.swift */,
+				B3CD759C2AE0FC1F0067044B /* UnlimintErrors.swift */,
+				B3CD759D2AE0FC1F0067044B /* Binding */,
+				B3CD75A32AE0FC1F0067044B /* Checkout */,
+				B3CD75A62AE0FC1F0067044B /* CardPaymentSystem.swift */,
+				B3CD75A72AE0FC1F0067044B /* Request.swift */,
+				B3CD75A82AE0FC1F0067044B /* Requisites */,
+				B3CD75AD2AE0FC1F0067044B /* WebNavigationResults.swift */,
+				B3CD75AE2AE0FC1F0067044B /* BillingAddress.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B3CD75842AE0FC1F0067044B /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75852AE0FC1F0067044B /* PaymentResultModel.swift */,
+				B3CD75862AE0FC1F0067044B /* PaymentToken */,
+				B3CD75892AE0FC1F0067044B /* PaymentResponse.swift */,
+				B3CD758A2AE0FC1F0067044B /* PaymentWithNewCard */,
+				B3CD758C2AE0FC1F0067044B /* PaymentCustomer.swift */,
+				B3CD758D2AE0FC1F0067044B /* Paypal */,
+				B3CD75912AE0FC1F0067044B /* PaymentMerchantOrder.swift */,
+				B3CD75922AE0FC1F0067044B /* Recurring */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		B3CD75862AE0FC1F0067044B /* PaymentToken */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75872AE0FC1F0067044B /* TokenizedCard.swift */,
+				B3CD75882AE0FC1F0067044B /* PaymentTokenMethodData.swift */,
+			);
+			path = PaymentToken;
+			sourceTree = "<group>";
+		};
+		B3CD758A2AE0FC1F0067044B /* PaymentWithNewCard */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD758B2AE0FC1F0067044B /* PaymentMethodData.swift */,
+			);
+			path = PaymentWithNewCard;
+			sourceTree = "<group>";
+		};
+		B3CD758D2AE0FC1F0067044B /* Paypal */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD758E2AE0FC1F0067044B /* PaypalResultModel.swift */,
+				B3CD758F2AE0FC1F0067044B /* PaypalPaymentCustomer.swift */,
+				B3CD75902AE0FC1F0067044B /* PaypalPaymentMethodData.swift */,
+			);
+			path = Paypal;
+			sourceTree = "<group>";
+		};
+		B3CD75922AE0FC1F0067044B /* Recurring */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75932AE0FC1F0067044B /* RecurringPaymentMethodData.swift */,
+				B3CD75942AE0FC1F0067044B /* RecurringPlan.swift */,
+				B3CD75952AE0FC1F0067044B /* RecurringResponse.swift */,
+				B3CD75962AE0FC1F0067044B /* RecurringPaymentTokenMethodData.swift */,
+				B3CD75972AE0FC1F0067044B /* RecurringData.swift */,
+				B3CD75982AE0FC1F0067044B /* RecurringCustomer.swift */,
+			);
+			path = Recurring;
+			sourceTree = "<group>";
+		};
+		B3CD759D2AE0FC1F0067044B /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD759E2AE0FC1F0067044B /* CardBindingResponseToken.swift */,
+				B3CD759F2AE0FC1F0067044B /* BindingResultModel.swift */,
+				B3CD75A02AE0FC1F0067044B /* BindingMethodData.swift */,
+				B3CD75A12AE0FC1F0067044B /* CardBindingResponse.swift */,
+				B3CD75A22AE0FC1F0067044B /* BindingCustomer.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		B3CD75A32AE0FC1F0067044B /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75A42AE0FC1F0067044B /* CheckoutResponse.swift */,
+				B3CD75A52AE0FC1F0067044B /* AvailablePaymentMethod.swift */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
+		B3CD75A82AE0FC1F0067044B /* Requisites */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75A92AE0FC1F0067044B /* CardRequisites.swift */,
+				B3CD75AA2AE0FC1F0067044B /* TokenPaymentRequisites.swift */,
+				B3CD75AB2AE0FC1F0067044B /* CardPaymentRequisites.swift */,
+				B3CD75AC2AE0FC1F0067044B /* PaypalRequisites.swift */,
+			);
+			path = Requisites;
+			sourceTree = "<group>";
+		};
+		B3CD75AF2AE0FC1F0067044B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75B02AE0FC1F0067044B /* Apply */,
+				B3CD75B22AE0FC1F0067044B /* Encodable */,
+				B3CD75B42AE0FC1F0067044B /* String */,
+				B3CD75B62AE0FC1F0067044B /* Error */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B3CD75B02AE0FC1F0067044B /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75B12AE0FC1F0067044B /* Apply.swift */,
+			);
+			path = Apply;
+			sourceTree = "<group>";
+		};
+		B3CD75B22AE0FC1F0067044B /* Encodable */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75B32AE0FC1F0067044B /* Encodable+json.swift */,
+			);
+			path = Encodable;
+			sourceTree = "<group>";
+		};
+		B3CD75B42AE0FC1F0067044B /* String */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75B52AE0FC1F0067044B /* String+Json.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		B3CD75B62AE0FC1F0067044B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75B72AE0FC1F0067044B /* NSError+Unlimint.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		B3CD75FA2AE0FDA30067044B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3CD75FB2AE0FDA30067044B /* Alamofire.xcframework */,
+				B3CD75FC2AE0FDA30067044B /* Moya.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +511,72 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CD75C22AE0FC1F0067044B /* RecurringPaymentRequestUseCase.swift in Sources */,
+				B3CD75CB2AE0FC1F0067044B /* BindingRequestToken.swift in Sources */,
+				B3CD75CD2AE0FC1F0067044B /* PaypalRequest.swift in Sources */,
+				B3CD75B92AE0FC1F0067044B /* PaymentCardRecurringDomain.swift in Sources */,
+				B3CD75E92AE0FC200067044B /* BindingMethodData.swift in Sources */,
+				B3CD75F02AE0FC200067044B /* CardRequisites.swift in Sources */,
+				B3CD75C12AE0FC1F0067044B /* CheckoutRequestUseCase.swift in Sources */,
+				B3CD75D82AE0FC1F0067044B /* PaymentCustomer.swift in Sources */,
+				B3CD75EE2AE0FC200067044B /* CardPaymentSystem.swift in Sources */,
+				B3CD75DD2AE0FC1F0067044B /* RecurringPaymentMethodData.swift in Sources */,
+				B3CD75F52AE0FC200067044B /* BillingAddress.swift in Sources */,
+				B3CD75BE2AE0FC1F0067044B /* PaymentRequestUseCase.swift in Sources */,
+				B3CD75CF2AE0FC1F0067044B /* PaymentRequest.swift in Sources */,
+				B3CD75D62AE0FC1F0067044B /* PaymentResponse.swift in Sources */,
+				B3CD75F42AE0FC200067044B /* WebNavigationResults.swift in Sources */,
+				B3CD75B82AE0FC1F0067044B /* NetworkService.swift in Sources */,
+				B3CD75C72AE0FC1F0067044B /* Environments.swift in Sources */,
+				B3CD75F72AE0FC200067044B /* Encodable+json.swift in Sources */,
+				B3CD75C62AE0FC1F0067044B /* Unlimit_Core.swift in Sources */,
+				B3CD75D72AE0FC1F0067044B /* PaymentMethodData.swift in Sources */,
+				B3CD75C42AE0FC1F0067044B /* UrlValidationUseCase.swift in Sources */,
+				B3CD75D22AE0FC1F0067044B /* ReturnUrls.swift in Sources */,
+				B3CD75C82AE0FC1F0067044B /* ApiEndpoints.swift in Sources */,
+				B3CD75E22AE0FC1F0067044B /* RecurringCustomer.swift in Sources */,
+				B3CD75F62AE0FC200067044B /* Apply.swift in Sources */,
+				B3CD75D32AE0FC1F0067044B /* PaymentResultModel.swift in Sources */,
+				B3CD75D02AE0FC1F0067044B /* BindingRequest.swift in Sources */,
+				B3CD75CC2AE0FC1F0067044B /* RecurringPaymentRequest.swift in Sources */,
+				B3CD75D12AE0FC1F0067044B /* MappingProtocol.swift in Sources */,
+				B3CD75E62AE0FC1F0067044B /* UnlimintErrors.swift in Sources */,
+				B3CD75EF2AE0FC200067044B /* Request.swift in Sources */,
+				B3CD75CA2AE0FC1F0067044B /* PaymentTokenRequest.swift in Sources */,
+				B3CD75E82AE0FC1F0067044B /* BindingResultModel.swift in Sources */,
+				B3CD75CE2AE0FC1F0067044B /* RecurringTokenPaymentRequest.swift in Sources */,
+				B3CD75F32AE0FC200067044B /* PaypalRequisites.swift in Sources */,
+				B3CD75EA2AE0FC200067044B /* CardBindingResponse.swift in Sources */,
+				B3CD75C52AE0FC1F0067044B /* Global.swift in Sources */,
+				B3CD75EB2AE0FC200067044B /* BindingCustomer.swift in Sources */,
+				B3CD75C92AE0FC1F0067044B /* Throwable.swift in Sources */,
+				B3CD75DE2AE0FC1F0067044B /* RecurringPlan.swift in Sources */,
+				B3CD75DF2AE0FC1F0067044B /* RecurringResponse.swift in Sources */,
+				B3CD75E32AE0FC1F0067044B /* Currency.swift in Sources */,
+				B3CD75BA2AE0FC1F0067044B /* PaymentCardDomain.swift in Sources */,
+				B3CD75ED2AE0FC200067044B /* AvailablePaymentMethod.swift in Sources */,
+				B3CD75D42AE0FC1F0067044B /* TokenizedCard.swift in Sources */,
+				B3CD75F92AE0FC200067044B /* NSError+Unlimint.swift in Sources */,
+				B3CD75BC2AE0FC1F0067044B /* CheckoutDomain.swift in Sources */,
+				B3CD75E42AE0FC1F0067044B /* CheckCardAccount.swift in Sources */,
+				B3CD75DA2AE0FC1F0067044B /* PaypalPaymentCustomer.swift in Sources */,
+				B3CD75E02AE0FC1F0067044B /* RecurringPaymentTokenMethodData.swift in Sources */,
+				B3CD75C02AE0FC1F0067044B /* BindingRequestUseCase.swift in Sources */,
+				B3CD75BD2AE0FC1F0067044B /* PayPalDomain.swift in Sources */,
+				B3CD75BF2AE0FC1F0067044B /* PaypalRequestUsecase.swift in Sources */,
+				B3CD75EC2AE0FC200067044B /* CheckoutResponse.swift in Sources */,
+				B3CD75F22AE0FC200067044B /* CardPaymentRequisites.swift in Sources */,
+				B3CD75BB2AE0FC1F0067044B /* BindingCardDomain.swift in Sources */,
+				B3CD75DB2AE0FC1F0067044B /* PaypalPaymentMethodData.swift in Sources */,
+				B3CD75F82AE0FC200067044B /* String+Json.swift in Sources */,
+				B3CD75DC2AE0FC1F0067044B /* PaymentMerchantOrder.swift in Sources */,
+				B3CD75E52AE0FC1F0067044B /* Card.swift in Sources */,
+				B3CD75D92AE0FC1F0067044B /* PaypalResultModel.swift in Sources */,
+				B3CD75E12AE0FC1F0067044B /* RecurringData.swift in Sources */,
+				B3CD75F12AE0FC200067044B /* TokenPaymentRequisites.swift in Sources */,
+				B3CD75C32AE0FC1F0067044B /* WebValidationUseCase.swift in Sources */,
+				B3CD75E72AE0FC1F0067044B /* CardBindingResponseToken.swift in Sources */,
+				B3CD75D52AE0FC1F0067044B /* PaymentTokenMethodData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +588,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -206,6 +655,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -263,6 +713,7 @@
 		B3CD74B72AE0F6730067044B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -284,7 +735,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unlimint.CarthageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -294,6 +745,7 @@
 		B3CD74B82AE0F6730067044B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -315,7 +767,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unlimint.CarthageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
